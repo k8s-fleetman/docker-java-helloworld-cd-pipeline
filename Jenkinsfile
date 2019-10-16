@@ -5,20 +5,12 @@ pipeline {
      // You must set the following environment variables
      // ORGANIZATION_NAME
      // YOUR_DOCKERHUB_USERNAME (it doesn't matter if you don't have one)
-     
-     SERVICE_NAME = "docker-java-helloworld-cd-pipeline"
+   
      IMAGE_NAME = "ci-cd-demo-${jenkins_username}"
      REPOSITORY_TAG="${DOCKERHUB_URL}/${IMAGE_NAME}:${BUILD_ID}"
    }
 
    stages {
-      stage('Preparation') {
-         steps {
-            cleanWs()
-            sh 'echo https://github.com/${ORGANIZATION_NAME}/${SERVICE_NAME}'
-            git credentialsId: 'GitHub', url: "https://github.com/${ORGANIZATION_NAME}/${SERVICE_NAME}"
-         }
-      }
       stage('Update user references') {
          steps {
             sh 'cat ./src/main/webapp/index.jsp'
