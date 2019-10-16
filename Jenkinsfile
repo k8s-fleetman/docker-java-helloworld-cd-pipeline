@@ -25,7 +25,7 @@ pipeline {
             sh 'ls -all'
             sh """sed -i 's+jenkins_username+'"${jenkins_username}"'+' deploy.yaml"""
             sh """sed -i 's+REPOSITORY_TAG+'"${REPOSITORY_TAG}"'+' deploy.yaml"""
-            sh """sed -i 's+jenkins_username+'"${jenkins_username}"'+' ingress-service.yaml"""
+            sh """sed -i 's+jenkins_username+'"${jenkins_username}"'+' ingress-routing.yaml"""
          }
       }
       stage('Build') {
