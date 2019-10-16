@@ -5,10 +5,9 @@ metadata:
   namespace: default
 spec:
   rules:
-  - host: jenkins_username.eqslearning.xyz
+  - host: jenkins_username.eqslearning.com
     http:
       paths:
-      - path: /docker-demo/
       - backend:
           serviceName: helloworld-jenkins_username
           servicePort: 8080
