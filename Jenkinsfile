@@ -56,8 +56,8 @@ pipeline {
           steps {
             sh 'cat deploy.yaml'
             sh 'kubectl apply -f deploy.yaml'
-            sh 'cat ingress-service.yaml'
-            sh 'kubectl apply -f ingress-service.yaml'
+            sh 'cat ingress-routing.yaml'
+            sh 'kubectl apply -f ingress-routing.yaml'
           }
       }
    }
