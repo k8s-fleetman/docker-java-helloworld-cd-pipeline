@@ -6,7 +6,7 @@ pipeline {
      // ORGANIZATION_NAME
      // YOUR_DOCKERHUB_USERNAME (it doesn't matter if you don't have one)
      
-     SERVICE_NAME = "docker-java-helloworld-pipeline"
+     SERVICE_NAME = "docker-java-helloworld-cd-pipeline"
      IMAGE_NAME = "ci-pipeline-demo-${jenkins_username}"
      REPOSITORY_TAG="${DOCKERHUB_URL}/${IMAGE_NAME}:${BUILD_ID}"
    }
