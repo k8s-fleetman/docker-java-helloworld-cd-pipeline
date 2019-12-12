@@ -16,7 +16,8 @@ spec:
       containers:
       - name: helloworld-jenkins_username
         image: REPOSITORY_TAG
-
+      imagePullSecrets:
+      - name: regcred
 ---
 apiVersion: v1
 kind: Service
